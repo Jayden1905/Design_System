@@ -162,6 +162,7 @@ a {
   }
   .navigation .nav-bar .nav-list .nav-link .number {
     display: none;
+    background-color: transparent;
   }
   .number {
     display: none;
