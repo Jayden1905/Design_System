@@ -1,0 +1,19 @@
+{
+  "name": "design-system",
+  "version": "1.0.0",
+  "description": "css training",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jayden1905/Design_System-.git"
+  },
+  "author": "Jayden",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jayden1905/Design_System-/issues"
+  },
+  "homepage": "https://github.com/Jayden1905/Design_System-#readme"
+}
