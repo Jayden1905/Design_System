@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Jayden1905/Design_System-/issues"
   },
-  "homepage": "https://github.com/Jayden1905/Design_System-#readme"
+  "homepage": "https://github.com/Jayden1905/Design_System-#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  }
 }

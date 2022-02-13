@@ -1,12 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap");
+
 $color-white: hsl(0, 8%, 100%);
 $color-dark: hsl(230, 35%, 7%);
 $color-light: hsl(231, 77%, 98%);
+
+@mixin flex-center() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin before-underline {
+  content: "";
+  position: absolute;
+  bottom: -100%;
+  width: 100%;
+  height: 4px;
+  background-color: $color-white;
+}
+
+@mixin before-underline-top {
+  content: "";
+  position: absolute;
+  top: 100%;
+  width: 0;
+  height: 4px;
+  background-color: $color-white;
+}
 
 *,
 *::before,
 *::after {
   padding: 0;
   margin: 0;
+}
+
+body {
+  font-family: "Bellefair", serif;
 }
 
 main {
@@ -27,9 +58,8 @@ a {
 }
 
 .navigation {
-  display: flex;
+  @include flex-center();
   justify-content: flex-end;
-  align-items: center;
   width: 100%;
   height: 100px;
   position: fixed;
@@ -51,39 +81,24 @@ a {
   }
 
   .nav-bar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-center();
     width: 60%;
     height: 100px;
     position: relative;
     background: rgba(255, 255, 255, 0.1);
     -webkit-backdrop-filter: blur(1.5rem);
-    -moz-backdrop-filter: blur(1.5rem);
-    -ms-backdrop-filter: blur(1.5rem);
-    -o-backdrop-filter: blur(1.5rem);
     backdrop-filter: blur(1.5rem);
 
     .nav-list {
+      @include flex-center();
       margin-right: 40px;
-      display: flex;
-      align-items: center;
       position: relative;
       &::before {
-        content: "";
-        position: absolute;
-        bottom: -100%;
+        @include before-underline();
         width: 0;
-        height: 4px;
-        background-color: $color-white;
       }
       &:hover::before {
-        content: "";
-        position: absolute;
-        bottom: -100%;
-        width: 100%;
-        height: 4px;
-        background-color: $color-white;
+        @include before-underline();
         opacity: 0.5;
       }
 
@@ -92,19 +107,21 @@ a {
       }
       .nav-link {
         color: white;
+        font-family: "Barlow Condensed", sans-serif;
+        letter-spacing: 2px;
         font-size: 1.3rem;
         text-transform: uppercase;
         position: relative;
         padding: 5px 0;
 
+        .number {
+          margin-right: 5px;
+          letter-spacing: 3px;
+        }
+
         &.active-link {
           &::before {
-            content: "";
-            position: absolute;
-            bottom: -100%;
-            width: 100%;
-            height: 4px;
-            background-color: $color-white;
+            @include before-underline();
           }
         }
       }
@@ -112,7 +129,6 @@ a {
   }
   .nav-toggle {
     display: none;
-    flex-direction: column;
 
     gap: 5px;
     position: absolute;
@@ -145,7 +161,6 @@ a {
         .nav-link {
           .number {
             display: none;
-            background-color: transparent;
           }
         }
       }
@@ -155,10 +170,11 @@ a {
     display: none;
   }
 }
-@media (max-width: 820px) {
+@media (max-width: 680px) {
   .navigation {
     .nav-toggle {
       display: flex;
+      flex-direction: column;
       cursor: pointer;
       .bar {
         transition: all 0.2s ease-out;
@@ -178,18 +194,17 @@ a {
     .nav-bar {
       display: flex;
       flex-direction: column;
+      justify-content: start;
+      align-items: flex-start;
       width: 70%;
       height: 100vh;
       position: absolute;
       left: 100%;
       top: 0;
-      justify-content: start;
-      align-items: flex-start;
       transition: all 0.5s ease-in-out;
       animation-fill-mode: both;
 
       .nav-list {
-        margin-right: 0;
         margin-bottom: 50px;
         position: relative;
         top: 20%;
@@ -197,46 +212,25 @@ a {
         width: 80%;
 
         &:hover::before {
-          content: "";
-          position: absolute;
-          bottom: -100%;
+          @include before-underline();
           width: 0;
-          height: 4px;
-          background-color: $color-white;
-          opacity: 0.5;
         }
 
         .nav-link {
           width: 400px;
           &.active-link {
             &::before {
-              content: "";
-              position: absolute;
-              bottom: -100%;
+              @include before-underline();
               width: 0;
-              height: 4px;
-              background-color: $color-white;
             }
           }
           &::before {
-            content: "";
-            position: absolute;
-            top: 100%;
-            width: 0;
-            height: 4px;
-            background-color: $color-white;
-            transition: all 0.2s ease-in-out;
-            animation-fill-mode: both;
+            @include before-underline-top();
           }
           &:hover::before {
-            content: "";
-            position: absolute;
-            top: 100%;
+            @include before-underline-top();
             width: 100%;
-            height: 4px;
-            background-color: $color-white;
             transition: all 0.2s ease-in-out;
-            animation-fill-mode: both;
           }
           .number {
             display: inline;
