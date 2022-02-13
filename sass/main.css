@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow&display=swap");
 *,
 *::before,
 *::after {
@@ -18,6 +19,16 @@ main {
   background-position: center;
   width: 100%;
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
 }
 
 ul {
@@ -182,6 +193,9 @@ a {
 }
 
 @media (max-width: 680px) {
+  .navigation {
+    z-index: 999;
+  }
   .navigation .nav-toggle {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -283,6 +297,117 @@ a {
   }
   .navigation .left-twenty {
     left: 30%;
+  }
+}
+
+.content-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 80%;
+}
+
+.content-box .text-box {
+  position: relative;
+  width: 45%;
+  margin-right: 10%;
+  color: white;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.content-box .text-box .upper-text {
+  text-transform: uppercase;
+  font-size: 2rem;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.content-box .text-box .space-text {
+  font-family: "Barlow", sans-serif;
+  font-size: 6rem;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  margin-bottom: 10px;
+}
+
+.content-box .text-box .bottom-text {
+  font-size: 1.5rem;
+  line-height: 30px;
+}
+
+.content-box .explorer {
+  color: #0c0e18;
+}
+
+.content-box .explorer .btn-explore {
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  font-size: 2rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  border: 1px solid white;
+}
+
+.content-box .explorer .btn-explore::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background-color: white;
+  z-index: -1;
+}
+
+.content-box .explorer .btn-explore:hover::before {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  opacity: 0.2;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+@media (max-width: 1100px) {
+  .content-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .content-box .text-box {
+    text-align: center;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10%;
+  }
+}
+
+@media (max-width: 680px) {
+  .content-box {
+    margin-top: 18%;
+  }
+  .content-box .text-box {
+    margin-bottom: 13%;
   }
 }
 /*# sourceMappingURL=main.css.map */
