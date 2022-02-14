@@ -4,7 +4,7 @@
   "description": "css training",
   "main": "script.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss sass/main.css"
+    "compile:sass": "node-sass sass/main.scss sass/main.css -w"
   },
   "repository": {
     "type": "git",
