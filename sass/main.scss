@@ -41,8 +41,19 @@ body {
   font-family: "Bellefair", serif;
 }
 
-main {
+.index {
   background-image: url(/assets/home/background-home-desktop.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  @include flex-center();
+  position: relative;
+}
+
+.destination-page {
+  background-image: url(/assets/destination/background-destination-desktop.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -327,6 +338,97 @@ a {
     margin-top: 18%;
     .text-box {
       margin-bottom: 13%;
+    }
+  }
+}
+
+.destination-wrap {
+  width: 80%; 
+  height: 75vh;
+  @include flex-center(); 
+  justify-content: flex-start;
+  flex-direction: column;
+  position: relative;
+  top: 10%;
+
+  .destination-heading {
+    width: 100%;
+    height: 10%; 
+    color: $color-white;
+    display: flex;
+    align-items: center; 
+    font-family: "Barlow Condensed", sans-serif;
+    text-transform: uppercase; 
+    letter-spacing: 8px;
+    .destination-number{
+      margin-right: 10px;
+      opacity: 0.3;
+    }
+  }
+  .destination-container{
+    width: 100%;
+    height: 90%;
+    @include flex-center(); 
+    gap: 50px;
+
+    .destination-image{
+      width: 550px;
+      height: 550px;
+      margin: 0 auto;
+      margin-bottom: 100px;
+    }
+    .description-planet {
+      width: 60%;
+      height: 100%;
+      margin-left: auto;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-direction: column;
+      gap: 30px;
+
+      .planet-navigation {
+        @include flex-center(); 
+        .planet-list {
+          margin-right: 30px;
+          .planet-link{
+            color: $color-white;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+          }
+        }
+      }
+        .planet-name{
+        color: white;
+        font-size: 8rem;
+        letter-spacing: 5px;
+        text-transform: uppercase; 
+      }
+        .planet-details {
+        color: white;
+        font-size: 1.5rem;
+        width: 65%;
+      }
+      .line-breaker{
+        width: 65%;
+        height: 1px;
+        background-color: white;
+        opacity: 0.3;
+      }
+        .distance{
+        color: white;
+        display: flex;
+        gap: 50px;
+        line-height: 40px;
+
+        .avg-distance,
+        .est-time {
+          span {
+            font-size: 2rem;
+          }
+        } 
+      }
     }
   }
 }
