@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design System CSS</title>
+    <link rel="stylesheet" href="../sass/main.css" />
+  </head>
+
+  <body>
+    <main class="destination-page">
+      <nav class="navigation">
+        <img src="./assets/shared/logo.svg" alt="logo" class="logo" />
+        <div class="nav-line"></div>
+        <ul class="nav-bar">
+          <li class="nav-list">
+            <a href="index.html" class="nav-link">
+              <span class="number">00</span> Home
+            </a>
+          </li>
+          <li class="nav-list">
+            <a href="destination.html" class="nav-link destination-link">
+              <span class="number">01</span> Destination
+            </a>
+          </li>
+          <li class="nav-list">
+            <a href="crew.html" class="nav-link">
+              <span class="number">02</span> Crew
+            </a>
+          </li>
+          <li class="nav-list">
+            <a href="technology.html" class="nav-link">
+              <span class="number">03</span> Technology
+            </a>
+          </li>
+        </ul>
+        <div class="nav-toggle">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </nav>
+      <div class="destination-wrap">
+        <h1 class="destination-heading">
+          <span class="destination-number">01</span> Pick your destination
+        </h1>
+        <div class="destination-container">
+          <img
+            src="./assets/destination/image-mars.png"
+            alt="mars"
+            class="destination-image"
+          />
+          <div class="description-planet">
+            <ul class="planet-navigation">
+              <li class="planet-list">
+                <a class="planet-link" href="destination.html">Moon</a>
+              </li>
+              <li class="planet-list">
+                <a class="planet-link" href="destination-mars.html">Mars</a>
+              </li>
+              <li class="planet-list">
+                <a class="planet-link" href="destination-europa.html">Europa</a>
+              </li>
+              <li class="planet-list">
+                <a class="planet-link" href="destination-titan.html">Titan</a>
+              </li>
+            </ul>
+            <h1 class="planet-name">Mars</h1>
+            <p class="planet-details">
+              Don't forget to pack yout hiking boots. You'll need them to tackle
+              Olympus Mons, the tallest planetry mountain in our solar system.
+              It's two and a half times the size of Everest!
+            </p>
+            <div class="line-breaker"></div>
+            <div class="distance">
+              <p class="avg-distance">
+                AVG.DISTSANCE <br />
+                <span class="number-distance">225 MIL. KM</span>
+              </p>
+              <p class="est-time">
+                EST.TRAVEL TIME <br />
+                <span class="number-time">9 MONTHS</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="destination"></div>
+    <script src="./script.js"></script>
+  </body>
+</html>
