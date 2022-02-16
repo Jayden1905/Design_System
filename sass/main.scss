@@ -69,6 +69,32 @@ main,
   overflow-x: hidden;
 }
 
+.crew-page {
+  background-image: url(/assets/crew/background-crew-desktop.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  @include flex-center();
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.technology-page {
+  background-image: url(/assets/technology/background-technology-desktop.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  @include flex-center();
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
 ul {
   list-style: none;
 }
@@ -84,6 +110,7 @@ a {
   height: 100px;
   position: fixed;
   top: 5%;
+  z-index: 999;
 
   .logo {
     width: 60px;
@@ -512,6 +539,165 @@ a {
           flex-direction: column;
           text-align: center;
           gap: 30px;
+        }
+      }
+    }
+  }
+}
+
+.crew-container {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 65%;
+  position: relative;
+  top: 10%;
+
+  .crew-heading {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: bolder;
+    font-family: "Barlow", sans-serif;
+
+    .number-crew {
+      opacity: 0.2;
+    }
+  }
+  .crew-description {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+    position: relative;
+
+    .crew-photo {
+      position: relative;
+      top: 10%;
+      width: 500px;
+      height: 700px;
+    }
+    .victor,
+    .anousheh {
+      width: 600px;
+    }
+
+    .crew-details {
+      position: relative;
+      top: 10%;
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      height: 100%;
+      gap: 10px;
+      .title {
+        color: white;
+        font-family: "Barlow", sans-serif;
+        text-transform: uppercase;
+        font-size: 3rem;
+        letter-spacing: 4px;
+        opacity: 0.5;
+      }
+      .crew-name {
+        color: white;
+        font-size: 4rem;
+        font-family: "Barlow", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+      }
+      .crew-info {
+        color: white;
+        font-size: 1.5rem;
+        font-family: "Barlow", sans-serif;
+        width: 90%;
+        line-height: 40px;
+      }
+      .crew-navigation {
+        width: 100%;
+        height: 100px;
+        position: relative;
+        top: 20%;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .circle {
+          width: 25px;
+          height: 25px;
+          border-radius: 100%;
+          background-color: white;
+          opacity: 0.4;
+          color: transparent;
+        }
+        .circle-active {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .crew-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 5%;
+
+    .crew-description {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      top: 45%;
+
+      .crew-details {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+
+        .crew-info {
+          text-align: center;
+          width: 100%;
+        }
+
+        .crew-navigation {
+          top: 6%;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 680px) {
+  .crew-container {
+    .crew-description {
+      // top: 50%;
+      top: -5%;
+      .crew-photo {
+        position: absolute;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.233);
+        padding-bottom: 0;
+        width: 500px;
+        height: 650px;
+      }
+      .crew-details {
+        top: 120%;
+
+        .title {
+          margin-top: 150px;
+        }
+
+        .crew-navigation {
+          position: absolute;
+
+          .circle {
+            bottom: 200px;
+          }
         }
       }
     }
