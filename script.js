@@ -3,12 +3,15 @@ const navBar = document.querySelector(".nav-bar");
 const marker = document.querySelector("#marker");
 const destinationItem = document.querySelector(".destination-link");
 const crewItem = document.querySelector(".crew-link");
+const technology = document.querySelector(".link-technology");
 const menuItem = document.querySelectorAll(".nav-link");
 const menuLength = menuItem.length;
 const planetItem = document.querySelectorAll(".planet-link");
 const planetLength = planetItem.length;
 const circleItem = document.querySelectorAll(".circle");
 const circleLength = circleItem.length;
+const techItem = document.querySelectorAll(".technology-link");
+const techLength = techItem.length;
 const currentLocation = location.href;
 
 navToggle.addEventListener("click", () => {
@@ -40,5 +43,12 @@ for (let i = 0; i < circleLength; i++) {
   if (circleItem[i].href === currentLocation) {
     circleItem[i].className = "circle circle-active";
     crewItem.className = "crew-link nav-link active-link";
+  }
+}
+
+for (let i = 0; i < techLength; i++) {
+  if (techItem[i].href === currentLocation) {
+    techItem[i].className = "technology-link technology-active";
+    technology.className = "link-technology nav-link active-link";
   }
 }
