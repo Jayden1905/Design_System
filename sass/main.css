@@ -5,13 +5,29 @@
 *::before,
 *::after {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+}
 
 body {
   font-family: "Bellefair", serif;
-  overflow-y: auto; }
+  overflow-y: auto;
+}
 
-main,
+main {
+  background-image: url(../assets/home/background-home-desktop.JPG);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
 .index {
   background-image: url(../assets/home/background-home-desktop.JPG);
   background-size: cover;
@@ -24,7 +40,8 @@ main,
   justify-content: center;
   position: relative;
   overflow-y: auto;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+}
 
 .destination-page {
   background-image: url(../assets/destination/background-destination-desktop.JPG);
@@ -38,7 +55,8 @@ main,
   justify-content: center;
   position: relative;
   overflow-y: auto;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+}
 
 .crew-page {
   background-image: url(../assets/crew/background-crew-desktop.JPG);
@@ -52,7 +70,8 @@ main,
   justify-content: center;
   position: relative;
   overflow-y: auto;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+}
 
 .technology-page {
   background-image: url(../assets/technology/background-technology-desktop.JPG);
@@ -66,13 +85,16 @@ main,
   justify-content: center;
   position: relative;
   overflow-y: auto;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+}
 
 ul {
-  list-style: none; }
+  list-style: none;
+}
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 .navigation {
   display: flex;
@@ -83,224 +105,271 @@ a {
   height: 100px;
   position: fixed;
   top: 5%;
-  z-index: 999; }
-  .navigation .logo {
-    width: 60px; }
-  .navigation .nav-line {
-    width: 30%;
-    height: 1px;
-    opacity: 0.5;
-    background-color: white;
-    position: relative;
-    left: 20px;
-    z-index: 1;
-    visibility: visible; }
-  .navigation .nav-bar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 60%;
-    height: 100px;
-    position: relative;
-    background: rgba(255, 255, 255, 0.1);
-    -webkit-backdrop-filter: blur(1.5rem);
-    backdrop-filter: blur(1.5rem); }
-    .navigation .nav-bar .nav-list {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 40px;
-      position: relative; }
-      .navigation .nav-bar .nav-list::before {
-        content: "";
-        position: absolute;
-        bottom: -100%;
-        width: 100%;
-        height: 4px;
-        background-color: white;
-        width: 0; }
-      .navigation .nav-bar .nav-list:hover::before {
-        content: "";
-        position: absolute;
-        bottom: -100%;
-        width: 100%;
-        height: 4px;
-        background-color: white;
-        opacity: 0.5; }
-      .navigation .nav-bar .nav-list:last-child {
-        margin-right: 0; }
-      .navigation .nav-bar .nav-list .nav-link {
-        color: white;
-        font-family: "Barlow Condensed", sans-serif;
-        letter-spacing: 2px;
-        font-size: 1.3rem;
-        text-transform: uppercase;
-        position: relative;
-        padding: 5px 0; }
-        .navigation .nav-bar .nav-list .nav-link .number {
-          margin-right: 5px;
-          letter-spacing: 3px; }
-        .navigation .nav-bar .nav-list .nav-link.active-link::before {
-          content: "";
-          position: absolute;
-          bottom: -100%;
-          width: 100%;
-          height: 4px;
-          background-color: white; }
-  .navigation .nav-toggle {
-    display: none;
-    gap: 5px;
-    position: absolute;
-    right: 20px; }
-    .navigation .nav-toggle .bar {
-      width: 25px;
-      height: 3px;
-      background-color: white; }
-  .navigation .number {
-    display: inline; }
+  z-index: 999;
+}
+.navigation .logo {
+  width: 60px;
+}
+.navigation .nav-line {
+  width: 30%;
+  height: 1px;
+  opacity: 0.5;
+  background-color: white;
+  position: relative;
+  left: 20px;
+  z-index: 1;
+  visibility: visible;
+}
+.navigation .nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  height: 100px;
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(1.5rem);
+  backdrop-filter: blur(1.5rem);
+}
+.navigation .nav-bar .nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 40px;
+  position: relative;
+}
+.navigation .nav-bar .nav-list::before {
+  content: "";
+  position: absolute;
+  bottom: -100%;
+  width: 100%;
+  height: 4px;
+  background-color: white;
+  width: 0;
+}
+.navigation .nav-bar .nav-list:hover::before {
+  content: "";
+  position: absolute;
+  bottom: -100%;
+  width: 100%;
+  height: 4px;
+  background-color: white;
+  opacity: 0.5;
+}
+.navigation .nav-bar .nav-list:last-child {
+  margin-right: 0;
+}
+.navigation .nav-bar .nav-list .nav-link {
+  color: white;
+  font-family: "Barlow Condensed", sans-serif;
+  letter-spacing: 2px;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  position: relative;
+  padding: 5px 0;
+}
+.navigation .nav-bar .nav-list .nav-link .number {
+  margin-right: 5px;
+  letter-spacing: 3px;
+}
+.navigation .nav-bar .nav-list .nav-link.active-link::before {
+  content: "";
+  position: absolute;
+  bottom: -100%;
+  width: 100%;
+  height: 4px;
+  background-color: white;
+}
+.navigation .nav-toggle {
+  display: none;
+  gap: 5px;
+  position: absolute;
+  right: 20px;
+}
+.navigation .nav-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+}
+.navigation .number {
+  display: inline;
+}
 
 @media (max-width: 1100px) {
   .navigation {
     position: absolute;
-    top: 0; }
-    .navigation .nav-line {
-      display: none; }
-    .navigation .logo {
-      margin-right: auto;
-      margin-left: 50px; }
-    .navigation .nav-bar {
-      width: 80%; }
-      .navigation .nav-bar .nav-list .nav-link .number {
-        display: none; }
+    top: 0;
+  }
+  .navigation .nav-line {
+    display: none;
+  }
+  .navigation .logo {
+    margin-right: auto;
+    margin-left: 50px;
+  }
+  .navigation .nav-bar {
+    width: 80%;
+  }
+  .navigation .nav-bar .nav-list .nav-link .number {
+    display: none;
+  }
   .number {
-    display: none; } }
+    display: none;
+  }
+}
 
 @media (max-width: 680px) {
   .navigation {
-    z-index: 999; }
-    .navigation .logo {
-      width: 40px;
-      height: 40px; }
-    .navigation .nav-toggle {
-      display: flex;
-      flex-direction: column;
-      cursor: pointer; }
-      .navigation .nav-toggle .bar {
-        transition: all 0.2s ease-out; }
-    .navigation .nav-toggle.nav-toggle-active .bar:nth-child(2) {
-      opacity: 0; }
-    .navigation .nav-toggle.nav-toggle-active .bar:nth-child(1) {
-      transform: translateY(8px) rotate(45deg); }
-    .navigation .nav-toggle.nav-toggle-active .bar:nth-child(3) {
-      transform: translateY(-8px) rotate(-45deg); }
-    .navigation .nav-bar {
-      display: flex;
-      flex-direction: column;
-      justify-content: start;
-      align-items: flex-start;
-      width: 70%;
-      height: 100vh;
-      position: absolute;
-      left: 100%;
-      top: 0;
-      transition: all 0.5s ease-in-out;
-      animation-fill-mode: both; }
-      .navigation .nav-bar .nav-list {
-        margin-bottom: 50px;
-        position: relative;
-        top: 20%;
-        left: 10%;
-        width: 80%; }
-        .navigation .nav-bar .nav-list:hover::before {
-          content: "";
-          position: absolute;
-          bottom: -100%;
-          width: 100%;
-          height: 4px;
-          background-color: white;
-          width: 0; }
-        .navigation .nav-bar .nav-list .nav-link {
-          width: 400px; }
-          .navigation .nav-bar .nav-list .nav-link.active-link::before {
-            content: "";
-            position: absolute;
-            bottom: -100%;
-            width: 100%;
-            height: 4px;
-            background-color: white;
-            width: 0; }
-          .navigation .nav-bar .nav-list .nav-link::before {
-            content: "";
-            position: absolute;
-            top: 100%;
-            width: 0;
-            height: 4px;
-            background-color: white; }
-          .navigation .nav-bar .nav-list .nav-link:hover::before {
-            content: "";
-            position: absolute;
-            top: 100%;
-            width: 0;
-            height: 4px;
-            background-color: white;
-            width: 100%;
-            transition: all 0.2s ease-in-out; }
-          .navigation .nav-bar .nav-list .nav-link .number {
-            display: inline; }
-    .navigation .left-twenty {
-      left: 30%; } }
+    z-index: 999;
+  }
+  .navigation .logo {
+    width: 40px;
+    height: 40px;
+  }
+  .navigation .nav-toggle {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  .navigation .nav-toggle .bar {
+    transition: all 0.2s ease-out;
+  }
+  .navigation .nav-toggle.nav-toggle-active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .navigation .nav-toggle.nav-toggle-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .navigation .nav-toggle.nav-toggle-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .navigation .nav-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    width: 70%;
+    height: 100vh;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    transition: all 0.5s ease-in-out;
+    animation-fill-mode: both;
+  }
+  .navigation .nav-bar .nav-list {
+    margin-bottom: 50px;
+    position: relative;
+    top: 20%;
+    left: 10%;
+    width: 80%;
+  }
+  .navigation .nav-bar .nav-list:hover::before {
+    content: "";
+    position: absolute;
+    bottom: -100%;
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    width: 0;
+  }
+  .navigation .nav-bar .nav-list .nav-link {
+    width: 400px;
+  }
+  .navigation .nav-bar .nav-list .nav-link.active-link::before {
+    content: "";
+    position: absolute;
+    bottom: -100%;
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    width: 0;
+  }
+  .navigation .nav-bar .nav-list .nav-link::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    width: 0;
+    height: 4px;
+    background-color: white;
+  }
+  .navigation .nav-bar .nav-list .nav-link:hover::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    width: 0;
+    height: 4px;
+    background-color: white;
+    width: 100%;
+    transition: all 0.2s ease-in-out;
+  }
+  .navigation .nav-bar .nav-list .nav-link .number {
+    display: inline;
+  }
+  .navigation .left-twenty {
+    left: 30%;
+  }
+}
 
 .content-box {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 80%; }
-  .content-box .text-box {
-    position: relative;
-    width: 45%;
-    margin-right: 10%;
-    color: white;
-    font-family: "Barlow Condensed", sans-serif; }
-    .content-box .text-box .upper-text {
-      text-transform: uppercase;
-      font-size: 2rem;
-      letter-spacing: 3px;
-      margin-bottom: 10px; }
-    .content-box .text-box .space-text {
-      font-family: "Barlow", sans-serif;
-      font-size: 6rem;
-      text-transform: uppercase;
-      letter-spacing: 10px;
-      margin-bottom: 10px; }
-    .content-box .text-box .bottom-text {
-      font-size: 1.5rem;
-      line-height: 30px; }
-  .content-box .explorer {
-    color: #0c0e18; }
-    .content-box .explorer .btn-explore {
-      width: 300px;
-      height: 300px;
-      border-radius: 100%;
-      font-size: 2rem;
-      text-transform: uppercase;
-      cursor: pointer;
-      position: relative;
-      z-index: 1;
-      border: 1px solid white; }
-      .content-box .explorer .btn-explore::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border-radius: 100%;
-        background-color: white;
-        z-index: -1; }
-      .content-box .explorer .btn-explore:hover::before {
-        transform: scale(1.3);
-        opacity: 0.2;
-        transition: all 0.4s ease-in-out; }
+  width: 80%;
+}
+.content-box .text-box {
+  position: relative;
+  width: 45%;
+  margin-right: 10%;
+  color: white;
+  font-family: "Barlow Condensed", sans-serif;
+}
+.content-box .text-box .upper-text {
+  text-transform: uppercase;
+  font-size: 2rem;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+.content-box .text-box .space-text {
+  font-family: "Barlow", sans-serif;
+  font-size: 6rem;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  margin-bottom: 10px;
+}
+.content-box .text-box .bottom-text {
+  font-size: 1.5rem;
+  line-height: 30px;
+}
+.content-box .explorer {
+  color: #0c0e18;
+}
+.content-box .explorer .btn-explore {
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  font-size: 2rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  border: 1px solid white;
+}
+.content-box .explorer .btn-explore::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background-color: white;
+  z-index: -1;
+}
+.content-box .explorer .btn-explore:hover::before {
+  transform: scale(1.3);
+  opacity: 0.2;
+  transition: all 0.4s ease-in-out;
+}
 
 @media (max-width: 1100px) {
   .content-box {
@@ -308,18 +377,24 @@ a {
     align-items: center;
     justify-content: center;
     justify-content: center;
-    flex-direction: column; }
-    .content-box .text-box {
-      text-align: center;
-      width: 100%;
-      margin-right: 0;
-      margin-bottom: 10%; } }
+    flex-direction: column;
+  }
+  .content-box .text-box {
+    text-align: center;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10%;
+  }
+}
 
 @media (max-width: 680px) {
   .content-box {
-    margin-top: 18%; }
-    .content-box .text-box {
-      margin-bottom: 13%; } }
+    margin-top: 18%;
+  }
+  .content-box .text-box {
+    margin-bottom: 13%;
+  }
+}
 
 .destination-wrap {
   width: 80%;
@@ -330,140 +405,209 @@ a {
   justify-content: flex-start;
   flex-direction: column;
   position: relative;
-  top: 10%; }
-  .destination-wrap .destination-heading {
-    width: 100%;
-    height: 10%;
-    color: white;
-    display: flex;
-    font-family: "Barlow Condensed", sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 8px; }
-    .destination-wrap .destination-heading .destination-number {
-      margin-right: 10px;
-      opacity: 0.3; }
-  .destination-wrap .destination-container {
-    position: relative;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 100px; }
-    .destination-wrap .destination-container .destination-image {
-      width: 550px;
-      height: 550px;
-      margin: 0 auto;
-      margin-bottom: 100px; }
-    .destination-wrap .destination-container .description-planet {
-      width: 60%;
-      height: 100%;
-      display: flex;
-      align-items: flex-start;
-      flex-direction: column;
-      gap: 30px; }
-      .destination-wrap .destination-container .description-planet .planet-navigation {
-        display: flex;
-        align-items: center;
-        justify-content: center; }
-        .destination-wrap .destination-container .description-planet .planet-navigation .planet-list {
-          margin-right: 30px;
-          position: relative; }
-          .destination-wrap .destination-container .description-planet .planet-navigation .planet-list::before {
-            content: "";
-            position: absolute;
-            bottom: -100%;
-            width: 100%;
-            height: 4px;
-            background-color: white;
-            width: 0; }
-          .destination-wrap .destination-container .description-planet .planet-navigation .planet-list:hover::before {
-            content: "";
-            position: absolute;
-            bottom: -100%;
-            width: 100%;
-            height: 4px;
-            background-color: white;
-            opacity: 0.5; }
-          .destination-wrap .destination-container .description-planet .planet-navigation .planet-list .planet-link {
-            color: white;
-            font-size: 1.3rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            position: relative; }
-          .destination-wrap .destination-container .description-planet .planet-navigation .planet-list .planet-active-link {
-            position: relative; }
-            .destination-wrap .destination-container .description-planet .planet-navigation .planet-list .planet-active-link::before {
-              content: "";
-              position: absolute;
-              bottom: -100%;
-              width: 100%;
-              height: 4px;
-              background-color: white;
-              z-index: 999; }
-      .destination-wrap .destination-container .description-planet .planet-name {
-        color: white;
-        font-family: "Barlow", sans-serif;
-        font-size: 8rem;
-        letter-spacing: 5px;
-        text-transform: uppercase; }
-      .destination-wrap .destination-container .description-planet .planet-details {
-        color: white;
-        font-size: 1.5rem;
-        width: 80%;
-        font-family: "Barlow", sans-serif;
-        border-bottom: 1px solid white;
-        padding-bottom: 50px; }
-      .destination-wrap .destination-container .description-planet .distance {
-        color: white;
-        display: flex;
-        gap: 50px;
-        line-height: 40px; }
-        .destination-wrap .destination-container .description-planet .distance .avg-distance span,
-        .destination-wrap .destination-container .description-planet .distance .est-time span {
-          font-size: 2rem;
-          padding-bottom: 100px; }
+  top: 10%;
+}
+.destination-wrap .destination-heading {
+  width: 100%;
+  height: 10%;
+  color: white;
+  display: flex;
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+}
+.destination-wrap .destination-heading .destination-number {
+  margin-right: 10px;
+  opacity: 0.3;
+}
+.destination-wrap .destination-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+.destination-wrap .destination-container .destination-image {
+  width: 550px;
+  height: 550px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+.destination-wrap .destination-container .description-planet {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 30px;
+}
+.destination-wrap
+  .destination-container
+  .description-planet
+  .planet-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.destination-wrap
+  .destination-container
+  .description-planet
+  .planet-navigation
+  .planet-list {
+  margin-right: 30px;
+  position: relative;
+}
+.destination-wrap
+  .destination-container
+  .description-planet
+  .planet-navigation
+  .planet-list::before {
+  content: "";
+  position: absolute;
+  bottom: -100%;
+  width: 100%;
+  height: 4px;
+  background-color: white;
+  width: 0;
+}
+.destination-wrap
+  .destination-container
+  .description-planet
+  .planet-navigation
+  .planet-list:hover::before {
+  content: "";
+  position: absolute;
+  bottom: -100%;
+  width: 100%;
+  height: 4px;
+  background-color: white;
+  opacity: 0.5;
+}
+.destination-wrap
+  .destination-container
+  .description-planet
+  .planet-navigation
+  .planet-list
+  .planet-link {
+  color: white;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+}
+.destination-wrap
+  .destination-container
+  .description-planet
+  .planet-navigation
+  .planet-list
+  .planet-active-link {
+  position: relative;
+}
+.destination-wrap
+  .destination-container
+  .description-planet
+  .planet-navigation
+  .planet-list
+  .planet-active-link::before {
+  content: "";
+  position: absolute;
+  bottom: -100%;
+  width: 100%;
+  height: 4px;
+  background-color: white;
+  z-index: 999;
+}
+.destination-wrap .destination-container .description-planet .planet-name {
+  color: white;
+  font-family: "Barlow", sans-serif;
+  font-size: 8rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+.destination-wrap .destination-container .description-planet .planet-details {
+  color: white;
+  font-size: 1.5rem;
+  width: 80%;
+  font-family: "Barlow", sans-serif;
+  border-bottom: 1px solid white;
+  padding-bottom: 50px;
+}
+.destination-wrap .destination-container .description-planet .distance {
+  color: white;
+  display: flex;
+  gap: 50px;
+  line-height: 40px;
+}
+.destination-wrap
+  .destination-container
+  .description-planet
+  .distance
+  .avg-distance
+  span,
+.destination-wrap
+  .destination-container
+  .description-planet
+  .distance
+  .est-time
+  span {
+  font-size: 2rem;
+  padding-bottom: 100px;
+}
 
 @media (max-width: 1100px) {
   .destination-wrap {
-    top: 5%; }
-    .destination-wrap .destination-heading {
-      width: max-content;
-      font-size: 1.3rem;
-      justify-content: center; }
-    .destination-wrap .destination-container {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      top: 35%;
-      gap: 0; }
-      .destination-wrap .destination-container .destination-image {
-        width: 400px;
-        height: 400px;
-        margin: 0 auto;
-        margin-bottom: 100px; }
-      .destination-wrap .destination-container .description-planet {
-        width: 100%;
-        height: 100%;
-        align-items: center;
-        gap: 40px; }
-        .destination-wrap .destination-container .description-planet .planet-details {
-          text-align: center;
-          width: 80%; } }
+    top: 5%;
+  }
+  .destination-wrap .destination-heading {
+    width: max-content;
+    font-size: 1.3rem;
+    justify-content: center;
+  }
+  .destination-wrap .destination-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 35%;
+    gap: 0;
+  }
+  .destination-wrap .destination-container .destination-image {
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+  }
+  .destination-wrap .destination-container .description-planet {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    gap: 40px;
+  }
+  .destination-wrap .destination-container .description-planet .planet-details {
+    text-align: center;
+    width: 80%;
+  }
+}
 
 @media (max-width: 680px) {
   .destination-wrap .destination-container {
-    top: 40%; }
-    .destination-wrap .destination-container .destination-image {
-      width: 350px;
-      height: 350px; }
-    .destination-wrap .destination-container .description-planet .planet-details {
-      width: 100%; }
-    .destination-wrap .destination-container .description-planet .distance {
-      flex-direction: column;
-      text-align: center;
-      gap: 30px; } }
+    top: 40%;
+  }
+  .destination-wrap .destination-container .destination-image {
+    width: 350px;
+    height: 350px;
+  }
+  .destination-wrap .destination-container .description-planet .planet-details {
+    width: 100%;
+  }
+  .destination-wrap .destination-container .description-planet .distance {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+}
 
 .crew-container {
   z-index: 1;
@@ -472,116 +616,146 @@ a {
   width: 80%;
   height: 65%;
   position: relative;
-  top: 10%; }
-  .crew-container .crew-heading {
-    color: white;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    font-weight: bolder;
-    font-family: "Barlow", sans-serif; }
-    .crew-container .crew-heading .number-crew {
-      opacity: 0.2; }
-  .crew-container .crew-description {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    gap: 10%;
-    position: relative; }
-    .crew-container .crew-description .crew-photo {
-      position: relative;
-      top: 10%;
-      width: 500px;
-      height: 700px; }
-    .crew-container .crew-description .victor,
-    .crew-container .crew-description .anousheh {
-      width: 600px; }
-    .crew-container .crew-description .crew-details {
-      position: relative;
-      top: 10%;
-      display: flex;
-      flex-direction: column;
-      width: 50%;
-      height: 100%;
-      gap: 10px; }
-      .crew-container .crew-description .crew-details .title {
-        color: white;
-        font-family: "Barlow", sans-serif;
-        text-transform: uppercase;
-        font-size: 3rem;
-        letter-spacing: 4px;
-        opacity: 0.5; }
-      .crew-container .crew-description .crew-details .crew-name {
-        color: white;
-        font-size: 4rem;
-        font-family: "Barlow", sans-serif;
-        text-transform: uppercase;
-        letter-spacing: 4px; }
-      .crew-container .crew-description .crew-details .crew-info {
-        color: white;
-        font-size: 1.5rem;
-        font-family: "Barlow", sans-serif;
-        width: 90%;
-        line-height: 40px; }
-      .crew-container .crew-description .crew-details .crew-navigation {
-        width: 100%;
-        height: 100px;
-        position: relative;
-        top: 20%;
-        display: flex;
-        align-items: center;
-        gap: 20px; }
-        .crew-container .crew-description .crew-details .crew-navigation .circle {
-          width: 25px;
-          height: 25px;
-          border-radius: 100%;
-          background-color: white;
-          opacity: 0.4;
-          color: transparent; }
-        .crew-container .crew-description .crew-details .crew-navigation .circle-active {
-          opacity: 1; }
+  top: 10%;
+}
+.crew-container .crew-heading {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: bolder;
+  font-family: "Barlow", sans-serif;
+}
+.crew-container .crew-heading .number-crew {
+  opacity: 0.2;
+}
+.crew-container .crew-description {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 10%;
+  position: relative;
+}
+.crew-container .crew-description .crew-photo {
+  position: relative;
+  top: 10%;
+  width: 500px;
+  height: 700px;
+}
+.crew-container .crew-description .victor,
+.crew-container .crew-description .anousheh {
+  width: 600px;
+}
+.crew-container .crew-description .crew-details {
+  position: relative;
+  top: 10%;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  gap: 10px;
+}
+.crew-container .crew-description .crew-details .title {
+  color: white;
+  font-family: "Barlow", sans-serif;
+  text-transform: uppercase;
+  font-size: 3rem;
+  letter-spacing: 4px;
+  opacity: 0.5;
+}
+.crew-container .crew-description .crew-details .crew-name {
+  color: white;
+  font-size: 4rem;
+  font-family: "Barlow", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+.crew-container .crew-description .crew-details .crew-info {
+  color: white;
+  font-size: 1.5rem;
+  font-family: "Barlow", sans-serif;
+  width: 90%;
+  line-height: 40px;
+}
+.crew-container .crew-description .crew-details .crew-navigation {
+  width: 100%;
+  height: 100px;
+  position: relative;
+  top: 20%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.crew-container .crew-description .crew-details .crew-navigation .circle {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  background-color: white;
+  opacity: 0.4;
+  color: transparent;
+}
+.crew-container
+  .crew-description
+  .crew-details
+  .crew-navigation
+  .circle-active {
+  opacity: 1;
+}
 
 @media (max-width: 1100px) {
   .crew-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 5%; }
-    .crew-container .crew-description {
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      top: 45%; }
-      .crew-container .crew-description .crew-details {
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        text-align: center; }
-        .crew-container .crew-description .crew-details .crew-info {
-          text-align: center;
-          width: 100%; }
-        .crew-container .crew-description .crew-details .crew-navigation {
-          top: 6%;
-          align-items: center;
-          justify-content: center; } }
+    top: 5%;
+  }
+  .crew-container .crew-description {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 45%;
+  }
+  .crew-container .crew-description .crew-details {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+  }
+  .crew-container .crew-description .crew-details .crew-info {
+    text-align: center;
+    width: 100%;
+  }
+  .crew-container .crew-description .crew-details .crew-navigation {
+    top: 6%;
+    align-items: center;
+    justify-content: center;
+  }
+}
 
 @media (max-width: 680px) {
   .crew-container .crew-description {
-    top: -5%; }
-    .crew-container .crew-description .crew-photo {
-      position: absolute;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.233);
-      padding-bottom: 0;
-      width: 500px;
-      height: 650px; }
-    .crew-container .crew-description .crew-details {
-      top: 120%; }
-      .crew-container .crew-description .crew-details .title {
-        margin-top: 150px; }
-      .crew-container .crew-description .crew-details .crew-navigation {
-        position: absolute; }
-        .crew-container .crew-description .crew-details .crew-navigation .circle {
-          bottom: 200px; } }
+    top: -5%;
+  }
+  .crew-container .crew-description .crew-photo {
+    position: absolute;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.233);
+    padding-bottom: 0;
+    width: 500px;
+    height: 650px;
+  }
+  .crew-container .crew-description .crew-details {
+    top: 120%;
+  }
+  .crew-container .crew-description .crew-details .title {
+    margin-top: 150px;
+  }
+  .crew-container .crew-description .crew-details .crew-navigation {
+    position: absolute;
+  }
+  .crew-container .crew-description .crew-details .crew-navigation .circle {
+    bottom: 200px;
+  }
+}
 
 .technology-container {
   width: 80%;
@@ -591,119 +765,192 @@ a {
   display: flex;
   flex-direction: column;
   margin-left: auto;
-  gap: 40px; }
-  .technology-container .technology-heading {
-    color: white;
-    text-transform: uppercase;
-    font-size: 2rem;
-    letter-spacing: 5px; }
-    .technology-container .technology-heading .technology-number {
-      opacity: 0.3; }
-  .technology-container .technolgy-wrap {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10%; }
-    .technology-container .technolgy-wrap .technology-description {
-      width: 50%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10%; }
-      .technology-container .technolgy-wrap .technology-description .technology-navigation {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        gap: 30px; }
-        .technology-container .technolgy-wrap .technology-description .technology-navigation .technology-link {
-          color: white;
-          font-size: 2rem;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          background-color: transparent;
-          width: 95px;
-          height: 95px;
-          border-radius: 100%;
-          outline: 1px solid white; }
-          .technology-container .technolgy-wrap .technology-description .technology-navigation .technology-link:hover {
-            color: black;
-            background-color: white; }
-        .technology-container .technolgy-wrap .technology-description .technology-navigation .technology-active {
-          color: black;
-          background-color: white; }
-      .technology-container .technolgy-wrap .technology-description .technology-details {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px; }
-        .technology-container .technolgy-wrap .technology-description .technology-details .technology-small-heading {
-          color: white;
-          text-transform: uppercase;
-          font-size: 1.3rem;
-          letter-spacing: 2px; }
-        .technology-container .technolgy-wrap .technology-description .technology-details .technology-main-heading {
-          font-family: "Barlow", sans-serif;
-          color: white;
-          font-size: 3.6rem;
-          text-transform: uppercase;
-          letter-spacing: 4px; }
-        .technology-container .technolgy-wrap .technology-description .technology-details .technology-body {
-          font-family: "Barlow", sans-serif;
-          color: white;
-          font-size: 1.3rem;
-          line-height: 30px;
-          width: 90%; }
-    .technology-container .technolgy-wrap .technology-photo {
-      height: 100%;
-      width: 40%; }
+  gap: 40px;
+}
+.technology-container .technology-heading {
+  color: white;
+  text-transform: uppercase;
+  font-size: 2rem;
+  letter-spacing: 5px;
+}
+.technology-container .technology-heading .technology-number {
+  opacity: 0.3;
+}
+.technology-container .technolgy-wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+}
+.technology-container .technolgy-wrap .technology-description {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+}
+.technology-container
+  .technolgy-wrap
+  .technology-description
+  .technology-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
+.technology-container
+  .technolgy-wrap
+  .technology-description
+  .technology-navigation
+  .technology-link {
+  color: white;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  width: 95px;
+  height: 95px;
+  border-radius: 100%;
+  outline: 1px solid white;
+}
+.technology-container
+  .technolgy-wrap
+  .technology-description
+  .technology-navigation
+  .technology-link:hover {
+  color: black;
+  background-color: white;
+}
+.technology-container
+  .technolgy-wrap
+  .technology-description
+  .technology-navigation
+  .technology-active {
+  color: black;
+  background-color: white;
+}
+.technology-container
+  .technolgy-wrap
+  .technology-description
+  .technology-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+.technology-container
+  .technolgy-wrap
+  .technology-description
+  .technology-details
+  .technology-small-heading {
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+}
+.technology-container
+  .technolgy-wrap
+  .technology-description
+  .technology-details
+  .technology-main-heading {
+  font-family: "Barlow", sans-serif;
+  color: white;
+  font-size: 3.6rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+.technology-container
+  .technolgy-wrap
+  .technology-description
+  .technology-details
+  .technology-body {
+  font-family: "Barlow", sans-serif;
+  color: white;
+  font-size: 1.3rem;
+  line-height: 30px;
+  width: 90%;
+}
+.technology-container .technolgy-wrap .technology-photo {
+  height: 100%;
+  width: 40%;
+}
 
 @media (max-width: 1100px) {
   .technology-container {
     justify-content: center;
     align-items: center;
     margin-left: 0;
-    width: 100%; }
-    .technology-container .technolgy-wrap {
-      flex-direction: column;
-      width: 100%;
-      position: relative;
-      top: 25%; }
-      .technology-container .technolgy-wrap .technology-photo {
-        position: relative;
-        bottom: 110%;
-        width: 100%;
-        z-index: 999; }
-      .technology-container .technolgy-wrap .technology-description {
-        margin-top: 50%;
-        flex-direction: column;
-        width: 100%;
-        justify-content: center;
-        align-items: center; }
-        .technology-container .technolgy-wrap .technology-description .technology-navigation {
-          flex-direction: row;
-          position: relative;
-          top: 115%; }
-        .technology-container .technolgy-wrap .technology-description .technology-details {
-          margin-top: 50px;
-          align-items: center;
-          justify-content: center;
-          position: relative;
-          top: 105%; }
-          .technology-container .technolgy-wrap .technology-description .technology-details .technology-main-heading {
-            text-align: center; }
-          .technology-container .technolgy-wrap .technology-description .technology-details .technology-body {
-            text-align: center;
-            margin-bottom: 100px; } }
+    width: 100%;
+  }
+  .technology-container .technolgy-wrap {
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    top: 25%;
+  }
+  .technology-container .technolgy-wrap .technology-photo {
+    position: relative;
+    bottom: 110%;
+    width: 100%;
+    z-index: 999;
+  }
+  .technology-container .technolgy-wrap .technology-description {
+    margin-top: 50%;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .technology-container
+    .technolgy-wrap
+    .technology-description
+    .technology-navigation {
+    flex-direction: row;
+    position: relative;
+    top: 115%;
+  }
+  .technology-container
+    .technolgy-wrap
+    .technology-description
+    .technology-details {
+    margin-top: 50px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 105%;
+  }
+  .technology-container
+    .technolgy-wrap
+    .technology-description
+    .technology-details
+    .technology-main-heading {
+    text-align: center;
+  }
+  .technology-container
+    .technolgy-wrap
+    .technology-description
+    .technology-details
+    .technology-body {
+    text-align: center;
+    margin-bottom: 100px;
+  }
+}
 
 @media (max-width: 680px) {
-  .technology-container .technolgy-wrap .technology-description .technology-navigation {
-    margin-top: 60px; }
+  .technology-container
+    .technolgy-wrap
+    .technology-description
+    .technology-navigation {
+    margin-top: 60px;
+  }
   .technology-container .technolgy-wrap .technology-photo {
-    margin-top: 60px; } }
+    margin-top: 60px;
+  }
+}
