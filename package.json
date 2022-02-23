@@ -1,7 +1,7 @@
 {
   "name": "design-system",
   "version": "1.0.0",
-  "description": "css training",
+  "description": "scss training",
   "main": "script.js",
   "scripts": {
     "compile:sass": "node-sass sass/main.scss sass/main.css -w"
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/Jayden1905/Design_System-.git"
   },
-  "author": "Jayden/Kyaw Za Yan Naing",
+  "author": "Jayden / Kyaw Za Yan Naing",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Jayden1905/Design_System-/issues"
