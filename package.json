@@ -18,5 +18,10 @@
   "homepage": "https://github.com/Jayden1905/Design_System-#readme",
   "devDependencies": {
     "node-sass": "^7.0.1"
+  },
+  "dependencies": {
+    "global": "^4.4.0",
+    "typescript": "^4.5.5",
+    "typescript-language-server": "^0.9.6"
   }
 }
